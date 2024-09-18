@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "ba6a4ba3-b06e-4532-be7c-c23a49b30922",
+		"name": "BookstoreAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34348289",
+		"_collection_link": "https://www.postman.com/mission-cosmologist-97502357/workspace/bookstorespace/collection/34348289-ba6a4ba3-b06e-4532-be7c-c23a49b30922?action=share&source=collection_link&creator=34348289"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Ankit\",\r\n    \"email\":\"ankit78@gmail.co\",\r\n    \"password\":\"45454545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6565/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"anand12@gmail.com\",\r\n    \"password\":\"123@123asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6565/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "getAllBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjY2MjQ5NzEsImV4cCI6MTcyNjYyODU3MX0.51RNTOTyMvG5DkiGUh3KVTQVlIdejk-9M4A62d4nR6g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6565/api/books/asd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"books",
+								"asd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "getCartItems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjY0MTczMCwiZXhwIjoxNzI2NjUyNTMwfQ.9jPZT2-c7VvJXrX-4IHZC0NAwKJogq5OZl5GSJliC1Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBooktoCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjY0MTczMCwiZXhwIjoxNzI2NjUyNTMwfQ.9jPZT2-c7VvJXrX-4IHZC0NAwKJogq5OZl5GSJliC1Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\":1,\r\n    \"quantity\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6565/api/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteItemFromCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjYzMzM0NCwiZXhwIjoxNzI2NjM2OTQ0fQ.zYiT9zA4PEYii4T-ucMPezEzMPF8AqMlVTTFVKGEymM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/cart/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"cart",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjY0MTczMCwiZXhwIjoxNzI2NjUyNTMwfQ.9jPZT2-c7VvJXrX-4IHZC0NAwKJogq5OZl5GSJliC1Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"order"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderHistory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjY0MTczMCwiZXhwIjoxNzI2NjUyNTMwfQ.9jPZT2-c7VvJXrX-4IHZC0NAwKJogq5OZl5GSJliC1Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcyNjY0MTczMCwiZXhwIjoxNzI2NjUyNTMwfQ.9jPZT2-c7VvJXrX-4IHZC0NAwKJogq5OZl5GSJliC1Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6565/api/order/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6565",
+							"path": [
+								"api",
+								"order",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
