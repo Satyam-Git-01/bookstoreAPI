@@ -204,13 +204,13 @@ Note I am using Sequelize that will automatically create the tables as needed. A
 
    **Method** : GET  
    **Endpoint**: `/api/orders/:id`  
-    **Headers** : `Authorization: Bearer <token>`  
+    **Headers** : `Authorization:<token>`  
     **Body**: None     
    **Params**: A valid orderId of a user
 
 
 # Postman collection
 
-`URL` - https://www.postman.com/mission-cosmologist-97502357/workspace/bookstorespace/collection/34348289-ba6a4ba3-b06e-4532-be7c-c23a49b30922?action=share&creator=34348289
+`URL` - 
 
 `file`- BookstoreAPI.postman_collection.json in root directory
